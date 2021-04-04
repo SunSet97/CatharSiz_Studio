@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.XR;
+using UnityEngine.VR;
 
 namespace VRStandardAssets.Examples
 { 
