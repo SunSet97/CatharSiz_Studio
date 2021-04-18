@@ -18,36 +18,51 @@ public class Main_Animation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-
+        anim = GetComponentInChildren<Animator>();
+        speed = anim.speed;
+        InvokeRepeating("Action", 1.0f,260f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (speed != 0) 
+        if (speed != 0)//움직이고 있을 때 //캐릭터의 속도 anim.speed
         {
-            anim.SetFloat("speed", speed);
             anim.SetBool("seat", false);
+            anim.SetFloat("speed", speed);
+            
         }
-        Invoke("Situation", 3.0f);
-        Invoke("Action",20.0f);
         
     }
-    void Action() 
+    void Action()
     {
-        anim.SetBool("seat", seat);
         action = UnityEngine.Random.Range(0, 4);
         anim.SetInteger("action", action);
         Debug.Log("Action" + action);
-        
+        InvokeRepeating("Situation",1.0f,20f);
     }
-
-    void Situation() 
+    void Situation()
     {
         situation = UnityEngine.Random.Range(0, 4);
         anim.SetInteger("situation", situation);
-        Debug.Log("Situation"+situation);
+        Debug.Log("Situation" + situation);
 
+    }
+
+   
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Chair"))
+        {
+            anim.SetBool("Seat", true);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Chair"))
+        {
+            anim.SetBool("Seat", false);
+        }
     }
 }
