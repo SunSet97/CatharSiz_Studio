@@ -320,6 +320,27 @@ CapsuleCollider:
   m_Height: 1.7546964
   m_Direction: 1
   m_Center: {x: 0.0012775362, y: 0.87811434, z: 0.062595755}
+--- !u!114 &936224847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936224845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71b37b5d8c8594990d3f1597e388b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 980087503}
+  char_Transform: {fileID: 980087504}
+  speed: 0
+  direction: 0
+  seat: 0
+  action_count: 2
+  situation_count: 4
+  action: 1
+  situation: 4
 --- !u!1 &971810890
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +350,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971810892}
-  - component: {fileID: 971810891}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -337,23 +357,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &971810891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971810890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a71b37b5d8c8594990d3f1597e388b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1230042139}
-  speed: 0
-  action: 4
-  situation: 4
-  seat: 0
 --- !u!4 &971810892
 Transform:
   m_ObjectHideFlags: 0
@@ -427,9 +430,19 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 99550d72697fb514ab09855ab884624a, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1a7d4de623788234eab8ec8a1d6c9c75, type: 2}
+      objectReference: {fileID: 9100000, guid: 3c515eed02bde8f4da42a0401ee38d92, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99550d72697fb514ab09855ab884624a, type: 3}
+--- !u!95 &980087503 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 99550d72697fb514ab09855ab884624a, type: 3}
+  m_PrefabInstance: {fileID: 980087502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &980087504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99550d72697fb514ab09855ab884624a, type: 3}
+  m_PrefabInstance: {fileID: 980087502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230042138
 GameObject:
   m_ObjectHideFlags: 0
