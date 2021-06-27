@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bed_nightstand
+  m_Shader: {fileID: 4800000, guid: 3b3c61bd1b913584bb6716a7249daa63, type: 3}
+  m_ShaderKeywords: _NORMALMAP _SPECGLOSSMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 5b1ca7c9401a6f9419a04b43eebbea7b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ba8faa2b149ec4649b43cfe84adfbf37, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 6e841b8584167fd48af44dd0264d92d7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 5b1ca7c9401a6f9419a04b43eebbea7b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 878b32028ee2e954fa37000a124e7608, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Spec:
+        m_Texture: {fileID: 2800000, guid: 078f42f7ea4e13d4cbe4553b9dfcc2aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: 078f42f7ea4e13d4cbe4553b9dfcc2aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _colorID:
+        m_Texture: {fileID: 2800000, guid: 6e841b8584167fd48af44dd0264d92d7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorB: {r: 0.19852942, g: 0.10268763, b: 0, a: 1}
+    - _ColorG: {r: 0.11764705, g: 0.089965396, b: 0.089965396, a: 1}
+    - _ColorMask_01: {r: 0, g: 0, b: 1, a: 1}
+    - _ColorMask_02: {r: 1, g: 0, b: 0, a: 1}
+    - _ColorMask_03: {r: 0.11724162, g: 1, b: 0, a: 1}
+    - _ColorMask_04: {r: 1, g: 0.9215687, b: 0, a: 0}
+    - _ColorMask_05: {r: 0.73333335, g: 0, b: 1, a: 0}
+    - _ColorMask_06: {r: 0, g: 0.5254902, b: 1, a: 0}
+    - _ColorMask_07: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorMask_08: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorR: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    - _Color_01: {r: 1, g: 0.9235294, b: 0.8088235, a: 1}
+    - _Color_02: {r: 0.8088235, g: 0.775519, b: 0.6363538, a: 1}
+    - _Color_03: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_04: {r: 0, g: 0, b: 0, a: 1}
+    - _Color_05: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_06: {r: 0.97794116, g: 0.9695106, b: 0.8556985, a: 1}
+    - _Color_07: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_08: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
