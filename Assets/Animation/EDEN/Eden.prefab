@@ -1162,9 +1162,9 @@ GameObject:
   - component: {fileID: 2425577289140710549}
   - component: {fileID: 8595486464077297391}
   - component: {fileID: 2748278568457980795}
-  - component: {fileID: 2748278568457980792}
+  - component: {fileID: 8913995340115877437}
   m_Layer: 0
-  m_Name: Eden_rigged
+  m_Name: Eden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,7 +1200,7 @@ Animator:
   m_GameObject: {fileID: 3090227036414604847}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 41cbabd64ec71a248b731c4c2cd669fc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c515eed02bde8f4da42a0401ee38d92, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8b6b7b86882d8724e969af86cab7a41c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1223,7 +1223,7 @@ CapsuleCollider:
   m_Height: 0.6800522
   m_Direction: 1
   m_Center: {x: 0, y: 0.33579302, z: -0.0061537027}
---- !u!114 &2748278568457980792
+--- !u!114 &8913995340115877437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1235,15 +1235,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a71b37b5d8c8594990d3f1597e388b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  char_Transform: {fileID: 0}
+  anim: {fileID: 8595486464077297391}
+  char_Transform: {fileID: 2425577289140710549}
   speed: 0
   direction: 0
   seat: 0
-  action_count: 1
-  situation_count: 4
+  action_count: 0
+  situation_count: 0
   action: 0
-  situation: 4
+  situation: 0
 --- !u!1 &3594897415398243317
 GameObject:
   m_ObjectHideFlags: 0

@@ -2161,9 +2161,9 @@ GameObject:
   - component: {fileID: 8182963337634535436}
   - component: {fileID: 2841653821828858486}
   - component: {fileID: 8504204234176937955}
-  - component: {fileID: 8504204234176937952}
+  - component: {fileID: 7049820908635392706}
   m_Layer: 0
-  m_Name: Aara_Proto_Rigged
+  m_Name: Aara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2195,7 @@ Animator:
   m_GameObject: {fileID: 8846311431238320822}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cf2d89adf5307384c93980b890322776, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c515eed02bde8f4da42a0401ee38d92, type: 2}
+  m_Controller: {fileID: 9100000, guid: 01ee6fc9852f52c4a8e5fe84856c028f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2218,7 +2218,7 @@ CapsuleCollider:
   m_Height: 0.7138848
   m_Direction: 1
   m_Center: {x: 0, y: 0.35270926, z: -0.0061537027}
---- !u!114 &8504204234176937952
+--- !u!114 &7049820908635392706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2235,7 +2235,7 @@ MonoBehaviour:
   speed: 0
   direction: 0
   seat: 0
-  action_count: 1
-  situation_count: 4
+  action_count: 0
+  situation_count: 0
   action: 0
-  situation: 4
+  situation: 0

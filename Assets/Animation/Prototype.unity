@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028338, g: 0.22571354, b: 0.3069222, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028386, g: 0.22571442, b: 0.30692336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -564,6 +564,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aato_Proto_rig_texture
       objectReference: {fileID: 0}
+    - target: {fileID: 6864146829419665773, guid: ffb5422b998bb7e498623d8a0b918f16, type: 3}
+      propertyPath: action_count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864146829419665773, guid: ffb5422b998bb7e498623d8a0b918f16, type: 3}
+      propertyPath: situation_count
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb5422b998bb7e498623d8a0b918f16, type: 3}
 --- !u!1001 &2748278568852635173
@@ -629,6 +637,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eden_rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 8913995340115877437, guid: b3f579eb6d0a9a0489a4857b4f41e9df, type: 3}
+      propertyPath: action_count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913995340115877437, guid: b3f579eb6d0a9a0489a4857b4f41e9df, type: 3}
+      propertyPath: situation_count
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f579eb6d0a9a0489a4857b4f41e9df, type: 3}
 --- !u!95 &2748278568852635174 stripped
@@ -648,6 +664,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7049820908635392706, guid: e554e00d396f0ec40884463a906c9560, type: 3}
+      propertyPath: action_count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049820908635392706, guid: e554e00d396f0ec40884463a906c9560, type: 3}
+      propertyPath: situation_count
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8182963337634535436, guid: e554e00d396f0ec40884463a906c9560, type: 3}
       propertyPath: m_RootOrder
       value: 5
