@@ -262,7 +262,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: action
-    m_EventTreshold: 1
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2972819396881955690}
   m_Solo: 0
@@ -612,7 +612,7 @@ AnimatorTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: action
-    m_EventTreshold: 1
+    m_EventTreshold: 4
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: 0
@@ -742,7 +742,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: action
-    m_EventTreshold: 1
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2972819396881955690}
   m_Solo: 0
@@ -770,7 +770,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: action
-    m_EventTreshold: 1
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2972819396881955690}
   m_Solo: 0
@@ -1024,7 +1024,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Proto 1
+  m_Name: Aara
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Direction
@@ -1530,7 +1530,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walking up stairs(action 1)
+  m_Name: walking up stairs(action 4)
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1606,15 +1606,15 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 7331822383062569866}
-    second:
-    - {fileID: -5886507054628279088}
-    - {fileID: 8124904935638181268}
   - first: {fileID: 3087514386436223080}
     second:
     - {fileID: 5248475606614956625}
     - {fileID: -2833982199935941112}
     - {fileID: -3074937288315969994}
+  - first: {fileID: 7331822383062569866}
+    second:
+    - {fileID: -5886507054628279088}
+    - {fileID: 8124904935638181268}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
@@ -2302,7 +2302,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: action
-    m_EventTreshold: 1
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2972819396881955690}
   m_Solo: 0
