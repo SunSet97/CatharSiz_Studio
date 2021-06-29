@@ -2163,7 +2163,7 @@ GameObject:
   - component: {fileID: 8504204234176937955}
   - component: {fileID: 8504204234176937952}
   m_Layer: 0
-  m_Name: Aara_Proto_Rigged
+  m_Name: Aara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2178,7 +2178,7 @@ Transform:
   m_GameObject: {fileID: 8846311431238320822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.89, y: 0.432, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 5906038840308625946}
   - {fileID: 4458540542930598040}
@@ -2239,3 +2239,4 @@ MonoBehaviour:
   situation_count: 4
   action: 0
   situation: 4
+  call_number: 0

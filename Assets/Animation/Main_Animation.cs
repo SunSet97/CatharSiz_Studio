@@ -8,6 +8,7 @@ using System;
 
 public class Main_Animation : MonoBehaviour
 {
+
     public Animator anim;
     public Transform char_Transform;
     [Header("Charcter Animation Properties")]
@@ -20,8 +21,8 @@ public class Main_Animation : MonoBehaviour
     [SerializeField] private int situation_count;
     [Space(10f)]
     [Header("Current State")]
-    [SerializeField] private int action;
-    [SerializeField] private int situation;
+    public int action;
+    public int situation;
 
 
     public int call_number;
