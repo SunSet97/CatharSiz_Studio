@@ -98,8 +98,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorB: {r: 0.29411763, g: 0.15212978, b: 0, a: 1}
-    - _ColorG: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorB: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorG: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
     - _ColorMask_01: {r: 0, g: 0.25490198, b: 1, a: 1}
     - _ColorMask_02: {r: 0.92549026, g: 0.06666667, b: 0, a: 1}
     - _ColorMask_03: {r: 0.9843138, g: 0.909804, b: 0, a: 0}
@@ -108,7 +108,7 @@ Material:
     - _ColorMask_06: {r: 0, g: 0, b: 0, a: 0}
     - _ColorMask_07: {r: 0, g: 0, b: 0, a: 0}
     - _ColorMask_08: {r: 0, g: 0, b: 0, a: 0}
-    - _ColorR: {r: 0.18382353, g: 0.11726672, b: 0.04595588, a: 1}
+    - _ColorR: {r: 1, g: 1, b: 1, a: 1}
     - _Color_01: {r: 0.83823526, g: 0.43739557, b: 0.12943341, a: 1}
     - _Color_02: {r: 0, g: 0, b: 0, a: 1}
     - _Color_03: {r: 0, g: 0, b: 0, a: 1}
@@ -119,3 +119,4 @@ Material:
     - _Color_08: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
