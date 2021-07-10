@@ -14,14 +14,14 @@ AnimatorState:
   - {fileID: -1289236700516029157}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 75acacaad468fac42a50e865009b6ebf, type: 3}
+  m_Motion: {fileID: -5054523964696698386, guid: 2011ec68a58cb214fbb4bcf1778eb832, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1244,7 +1244,7 @@ AnimatorState:
   - {fileID: 7862311457621471332}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -1606,15 +1606,15 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: 7331822383062569866}
+    second:
+    - {fileID: -5886507054628279088}
+    - {fileID: 8124904935638181268}
   - first: {fileID: 3087514386436223080}
     second:
     - {fileID: 5248475606614956625}
     - {fileID: -2833982199935941112}
     - {fileID: -3074937288315969994}
-  - first: {fileID: 7331822383062569866}
-    second:
-    - {fileID: -5886507054628279088}
-    - {fileID: 8124904935638181268}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
@@ -2408,7 +2408,7 @@ AnimatorState:
   - {fileID: -6186056526724730836}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0

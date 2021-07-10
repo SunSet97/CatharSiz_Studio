@@ -1,11 +1,17 @@
 fileFormatVersion: 2
-guid: 50c723365bd87c14185efe73ae4e2ce7
+guid: 3166ea089ace7704a8feb9d25c38ad05
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -7866197689799504308
     second: eden_lean on
+  - first:
+      74: -6341296197484781477
+    second: eden_leanOn
+  - first:
+      74: -5054523964696698386
+    second: eden_sit_outside
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,9 +41,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: eden_lean on
-      takeName: eden_lean on
-      internalID: -7866197689799504308
+      name: eden_leanOn
+      takeName: eden_leanOn
+      internalID: -6341296197484781477
       firstFrame: 0
       lastFrame: 27
       wrapMode: 0
@@ -48,10 +54,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -526,13 +532,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: eden_leanOn(Clone)
+    - name: eden_leanOn_24(Clone)
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Ato_jnt
-      parentName: eden_leanOn(Clone)
+      parentName: eden_leanOn_24(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -872,7 +878,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: polySurface13
-      parentName: eden_leanOn(Clone)
+      parentName: eden_leanOn_24(Clone)
       position: {x: -0, y: 0.023092836, z: 0.05855912}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 0.01, y: 0.01, z: 0.01}
