@@ -4,14 +4,8 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -7866197689799504308
-    second: eden_lean on
-  - first:
       74: -6341296197484781477
     second: eden_leanOn
-  - first:
-      74: -5054523964696698386
-    second: eden_sit_outside
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -56,7 +50,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -532,13 +526,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: eden_leanOn_24(Clone)
+    - name: eden_leanOn(Clone)
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Ato_jnt
-      parentName: eden_leanOn_24(Clone)
+      parentName: eden_leanOn(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -565,7 +559,7 @@ ModelImporter:
     - name: mixamorig:LeftFoot
       parentName: mixamorig:LeftLeg
       position: {x: -1.4693705e-12, y: 0.0016687899, z: 1.20943e-12}
-      rotation: {x: 0.46730468, y: -0.11184054, z: 0.045575965, w: 0.8758087}
+      rotation: {x: 0.46730474, y: -0.1118406, z: 0.045575853, w: 0.87580866}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftToeBase
       parentName: mixamorig:LeftFoot
@@ -590,7 +584,7 @@ ModelImporter:
     - name: mixamorig:RightFoot
       parentName: mixamorig:RightLeg
       position: {x: -2.0452313e-13, y: 0.0016688918, z: -4.6745913e-13}
-      rotation: {x: 0.46507967, y: 0.11136801, z: -0.04529974, w: 0.87706673}
+      rotation: {x: 0.46507972, y: 0.111367986, z: -0.045299713, w: 0.87706673}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightToeBase
       parentName: mixamorig:RightFoot
@@ -878,7 +872,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: polySurface13
-      parentName: eden_leanOn_24(Clone)
+      parentName: eden_leanOn(Clone)
       position: {x: -0, y: 0.023092836, z: 0.05855912}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 0.01, y: 0.01, z: 0.01}

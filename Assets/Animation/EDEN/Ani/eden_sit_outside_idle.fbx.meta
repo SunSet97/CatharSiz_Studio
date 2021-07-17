@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 2011ec68a58cb214fbb4bcf1778eb832
+guid: 10e856318359f584b9b00543822ed6d9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -5054523964696698386
-    second: eden_sit_outside
+      74: -5480729003296561126
+    second: eden_sit_outside_idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,22 +35,22 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: eden_sit_outside
-      takeName: eden_sit_outside
-      internalID: -5054523964696698386
+      name: eden_sit_outside_idle
+      takeName: eden_sit_outside_idle
+      internalID: -5480729003296561126
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 54
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -888,11 +888,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2011ec68a58cb214fbb4bcf1778eb832, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
