@@ -463,6 +463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eden_House
       objectReference: {fileID: 0}
+    - target: {fileID: 506327515082478522, guid: 0dc7cb92c8c5bff43b77217c0939f73f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 886371975840073984, guid: 0dc7cb92c8c5bff43b77217c0939f73f, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3717,13 +3721,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
-    'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-    'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -5228,6 +5226,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45249f11a35eb4941af77b53a88888bd, type: 3}
+--- !u!1001 &6683331106532611237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5800249200546689831, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_Name
+      value: Eden_House_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572246394053355933, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c74db0eb03e573e4885c6e1b58536c26, type: 3}
 --- !u!1001 &7600451650425894068
 PrefabInstance:
   m_ObjectHideFlags: 0
