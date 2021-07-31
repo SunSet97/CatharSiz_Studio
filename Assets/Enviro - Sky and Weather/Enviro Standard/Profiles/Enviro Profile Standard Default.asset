@@ -597,9 +597,9 @@ MonoBehaviour:
     highQuality: 1
     radius: 3
   skySettings:
-    skyboxMode: 0
+    skyboxMode: 2
     skyboxModeLW: 0
-    customSkyboxMaterial: {fileID: 0}
+    customSkyboxMaterial: {fileID: 2100000, guid: e86dcb0ea55e75140b20fadfd68121f2, type: 2}
     customSkyboxColor: {r: 0, g: 0, b: 0, a: 0}
     blackGroundMode: 0
     waveLength: {x: 540, y: 496, z: 437}
@@ -1604,7 +1604,7 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    skyFogIntensity: 0.2
+    skyFogIntensity: 0.182
     fogExposure: 1
     useEnviroGroundFog: 0
     useHDRPFog: 1
@@ -1969,4 +1969,4 @@ MonoBehaviour:
   showWeatherUI: 1
   showAudioUI: 0
   showEffectsUI: 0
-  modified: 1
+  modified: 0
