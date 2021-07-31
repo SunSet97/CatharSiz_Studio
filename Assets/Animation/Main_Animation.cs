@@ -8,7 +8,6 @@ using System;
 
 public class Main_Animation : MonoBehaviour
 {
-
     public Animator anim;
     public Transform char_Transform;
     [Header("Charcter Animation Properties")]
@@ -21,12 +20,10 @@ public class Main_Animation : MonoBehaviour
     [SerializeField] private int situation_count;
     [Space(10f)]
     [Header("Current State")]
-    public int action;
-    public int situation;
+    [SerializeField] private int action;
+    [SerializeField] private int situation;
 
-
-    public int call_number;
-    private int temp;
+    
 
 
     // Start is called before the first frame update
@@ -37,9 +34,9 @@ public class Main_Animation : MonoBehaviour
         direction= anim.GetFloat("Direction");
         action = anim.GetInteger("action");
         situation = anim.GetInteger("situation");
-        if (action_count>0)//action의 수가 1개 이상일 때.
+        if (action_count>0)//action의 수가 4개 이상일 때.
             InvokeRepeating("Action", 1.0f,10f);
-        else//action의 수가 1개미만 있을 때
+        else//action의 수가 3개이하 있을 때
             InvokeRepeating("Situation", 1.0f, 10f);
     }
 
@@ -63,18 +60,17 @@ public class Main_Animation : MonoBehaviour
     }
     void Action()
     {
-        temp = call_number + 1;
-        call_number = temp;
-        action = UnityEngine.Random.Range(0, action_count); 
+        action = UnityEngine.Random.Range(0, action_count);
+        
         anim.SetInteger("action", action);
-        Debug.Log(this.gameObject.name +"의 Action: "+ action);
+        Debug.Log("Action" + action);
         InvokeRepeating("Situation",1.0f,10f);
     }
     void Situation()
     {
         situation = UnityEngine.Random.Range(0, situation_count);
         anim.SetInteger("situation", situation);
-        Debug.Log(call_number + "번째" + this.gameObject.name + "의 situation: "+ situation);
+        Debug.Log("Situation" + situation);
 
     }
 
