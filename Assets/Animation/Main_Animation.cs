@@ -22,9 +22,14 @@ public class Main_Animation : MonoBehaviour
     [Header("Current State")]
     [SerializeField] private int action;
     [SerializeField] private int situation;
+    bool isPicking;
+    [SerializeField] GameObject playerEquipPoint;
 
-    
 
+    void Awake() 
+    {
+        playerEquipPoint = GameObject.FindGameObjectWithTag("EquipPoint");
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +39,10 @@ public class Main_Animation : MonoBehaviour
         direction= anim.GetFloat("Direction");
         action = anim.GetInteger("action");
         situation = anim.GetInteger("situation");
-        if (action_count>0)//action의 수가 4개 이상일 때.
+        /*if (action_count>0)//action의 수가 4개 이상일 때.
             InvokeRepeating("Action", 1.0f,10f);
         else//action의 수가 3개이하 있을 때
-            InvokeRepeating("Situation", 1.0f, 10f);
+            InvokeRepeating("Situation", 1.0f, 10f);*/
     }
 
     // Update is called once per frame
@@ -55,9 +60,43 @@ public class Main_Animation : MonoBehaviour
             anim.SetInteger("action", action);
             anim.SetInteger("situation", situation);
         }
-            
+        if (isPicking) 
+        {
+            Drop();
+        }
+
 
     }
+    public void Pickup(GameObject item)
+    {
+        SetEquip(item, true);
+        anim.SetTrigger("Equip");
+        isPicking = true;
+
+    }
+    void Drop()
+    {
+        GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
+        SetEquip(item, false);
+
+        playerEquipPoint.transform.DetachChildren();
+        isPicking = false;
+    }
+    void SetEquip(GameObject item, bool isEquip)
+    {
+        Collider[] itemColliders = item.GetComponents<Collider>();
+        Rigidbody itemRigidbody = item.GetComponent<Rigidbody>();
+        foreach (Collider itemCollider in itemColliders)
+        {
+            itemCollider.enabled = !isEquip;
+        }
+
+        itemRigidbody.isKinematic = isEquip;
+    }
+
+    #region
+    /*
+   
     void Action()
     {
         action = UnityEngine.Random.Range(0, action_count);
@@ -95,5 +134,7 @@ public class Main_Animation : MonoBehaviour
         {
             anim.SetInteger("action", 0);
         }
-    }
+    }*/
+    #endregion
+
 }
