@@ -35,13 +35,13 @@ public class object_equip : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerEquipPoint)
             isPlayerEnter = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerEquipPoint)
             isPlayerEnter = false;
     }
 
