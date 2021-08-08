@@ -9,16 +9,16 @@ using UnityEngine.AI;
 public class Main_Animation : MonoBehaviour
 {
     public Animator anim;
-    Animation animation;
     public Transform char_Transform;
     NavMeshAgent agent;
     [Header("Charcter Animation Properties")]
     [SerializeField] private float speed;
+    [SerializeField] private Vector3 AgentVector;
     [SerializeField] private float direction;
     [SerializeField] private int target_num;
     [SerializeField] private GameObject[] Targets;
-    [SerializeField] private bool seat;
-    private bool action;
+    [SerializeField] private bool action;
+
     [Space(10f)]
     [Header("Current State")]
     [SerializeField] private int action_num;
@@ -40,11 +40,11 @@ public class Main_Animation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        action = false;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        animation = GetComponent<Animation>();
         speed = agent.speed;
-        direction = agent.angularSpeed*Mathf.Deg2Rad;//각도>라디안
         action_num = anim.GetInteger("action");
         situation_num = anim.GetInteger("situation");
     }
@@ -52,16 +52,16 @@ public class Main_Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (speed != 0&& action)//움직이고 있을 때 //캐릭터의 속도 anim.speed
+        //anim.SetFloat("Direction", Mathf.Cos(agent.gameObject.transform.rotation.y));
+        if (action==false)//애니메이션이 끝났을 때
         {
             anim.SetInteger("action",0);//기본상태
-            anim.SetBool("Seat", false);
             anim.SetFloat("Speed", speed);
+            Degree();
             anim.SetFloat("Direction", direction);
             findTarget();//타겟으로 이동하도록 만듦
-
         }
-        if (speed == 0&& action) 
+        else
         {
             anim.SetInteger("situation", situation_num);
         }
@@ -71,26 +71,47 @@ public class Main_Animation : MonoBehaviour
             Drop();
         }
     }
+    void Degree() 
+    {
+        Vector3 Agent_direection = new Vector3(agent.gameObject.transform.rotation.x, 0, agent.gameObject.transform.rotation.z);
+        Vector3 Char_direction = new Vector3(char_Transform.rotation.x, 0, char_Transform.rotation.z);
+        Vector3 minus = Agent_direection - Char_direction;
+        float Rad = Mathf.Atan2(minus.y, minus.x);
+        Debug.Log(Rad);
+        direction = Rad;
+    }
     //Navigation세팅
     #region
     public void findTarget()//타겟 위치 찾아서 방향을 잡는 것
     {
-        target_num= UnityEngine.Random.Range(0,Targets.Length);
-        agent.SetDestination(Targets[target_num].transform.position);
-    }
-    public void OnTriggerEnter(Collider other)//타겟에 부딪히면 세팅된 애니메이션 실행
-    {
-        if (other.gameObject.CompareTag("Target")) 
+        if (target_num == 0 || (action==false && speed==0))//타겟넘버 세팅 안되어있을 때 혹은 멈춰있는 상태에 false일 때
         {
+            target_num = UnityEngine.Random.Range(1, Targets.Length+1);//1~5까지 타겟 세팅
+        }
+        agent.SetDestination(Targets[target_num-1].transform.position);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.gameObject.CompareTag("target"))
+        {
+            Debug.Log(other.name);
             action = true;
-            speed = 0;
-            char_Transform.LookAt(other.gameObject.transform);//target방향으로 바라보게 만들기
+            agent.transform.rotation= other.gameObject.transform.localRotation;
+            agent.transform.position = other.gameObject.transform.position;
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+            agent.ResetPath();
             SetAnim(other.gameObject.name);//object의 애니메이션 number를 함수에 보냄
         }
     }
+    #endregion
+    //애니메이션 세팅
+    #region
     public void SetAnim(string action_number)//부딪힌 오브젝트에 세팅된 애니메이션 재생
     {
-        action_num= int.Parse(action_number);//string>int
+        action_num= int.Parse(action_number);//
         anim.SetInteger("action", action_num);//애니메이션 재생
         if (anim.GetCurrentAnimatorStateInfo(0).loop)//현재 재생중인 애니메이션이 Loop일 때. 
         {
@@ -101,13 +122,15 @@ public class Main_Animation : MonoBehaviour
             if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f) 
             {
                 action = false;
+                agent.isStopped = false;
+                 //AgentSetting();
             }
         }
-        ㄴ
+        
     }
     void Situation()//애니메이터 SubStateMachine에 있는 종속 애니메이션 실행
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 5.0f)//재생된 횟수가 5번 이상되버리면 action끄기 
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2.0f)//재생된 횟수가 2번 이상되버리면 action끄기 
         {
             action = false;
         }
@@ -134,11 +157,15 @@ public class Main_Animation : MonoBehaviour
     }
     void Drop()
     {
-        GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
-        SetEquip(item, false);
+        if (action == false) 
+        {
+            GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
+            SetEquip(item, false);
 
-        playerEquipPoint.transform.DetachChildren();
-        isPicking = false;
+            playerEquipPoint.transform.DetachChildren();
+            isPicking = false;
+        }
+        
     }
     void SetEquip(GameObject item, bool isEquip)
     {
