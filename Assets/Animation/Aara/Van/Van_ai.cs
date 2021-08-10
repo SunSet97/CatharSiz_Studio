@@ -11,7 +11,8 @@ public class Van_ai : MonoBehaviour
     private float wheel_radius;
     [SerializeField] private int target_Num;
     public GameObject[] Targets;
-
+    Vector3 target_vector;
+    Vector3 Wheel_vector;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +22,16 @@ public class Van_ai : MonoBehaviour
         Van_agent = GetComponent<NavMeshAgent>();
         vehicle_speed = GetComponent<NavMeshAgent>().speed;
         Van_agent.SetDestination(Targets[0].transform.position);
+        target_vector = Targets[target_Num].transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Wheels[0].transform.LookAt(Targets[target_Num].transform.position, Vector3.up);
-        Wheels[1].transform.LookAt(Targets[target_Num].transform.position, Vector3.up);
+        
+        Wheels[0].transform.LookAt(Targets[target_Num].transform.position);
+        Wheels[1].transform.LookAt(Targets[target_Num].transform.position);
+
         Wheel_Rot();
     }
 
@@ -57,10 +61,10 @@ public class Van_ai : MonoBehaviour
     {
         if (vehicle_speed > 0) 
         {
-            Wheels[0].transform.Rotate(Vector3.right * vehicle_speed * Time.deltaTime, Space.Self);
-            Wheels[1].transform.Rotate(Vector3.right * vehicle_speed * Time.deltaTime, Space.Self);
-            Wheels[2].transform.Rotate(Vector3.right * vehicle_speed * Time.deltaTime, Space.Self);
-            Wheels[3].transform.Rotate(Vector3.right * vehicle_speed * Time.deltaTime, Space.Self);
+            Wheels[0].transform.Rotate(Vector3.right * vehicle_speed * 10 * Time.deltaTime, Space.Self);
+            Wheels[1].transform.Rotate(Vector3.right * vehicle_speed * 10 * Time.deltaTime, Space.Self);
+            Wheels[2].transform.Rotate(Vector3.right * vehicle_speed * 10 * Time.deltaTime, Space.Self);
+            Wheels[3].transform.Rotate(Vector3.right * vehicle_speed * 10 * Time.deltaTime, Space.Self);
         }
         
     }
