@@ -1108,14 +1108,14 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Jump
+  - m_Name: Equip
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Equip
-    m_Type: 9
+  - m_Name: Action
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -1536,12 +1536,12 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -8749716341561055098}
-    second:
-    - {fileID: -7405433359458470309}
   - first: {fileID: 7331822383062569866}
     second:
     - {fileID: -5886507054628279088}
+  - first: {fileID: -8749716341561055098}
+    second:
+    - {fileID: -7405433359458470309}
   - first: {fileID: -8181046832628432270}
     second:
     - {fileID: 2489905915976856084}
@@ -1719,7 +1719,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Locomotion
+  m_Name: 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2245,7 +2245,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Action
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: action
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3981366218499815347}
   m_Solo: 0
@@ -2267,7 +2273,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Action
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: action
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3114026497120865238}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -2318,6 +2330,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: action
     m_EventTreshold: 5
+  - m_ConditionMode: 1
+    m_ConditionEvent: Action
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6581307552420449172}
   m_Solo: 0

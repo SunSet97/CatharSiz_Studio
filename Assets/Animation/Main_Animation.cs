@@ -17,7 +17,7 @@ public class Main_Animation : MonoBehaviour
     [SerializeField] private float direction;
     [SerializeField] private int target_num;
     [SerializeField] private GameObject[] Targets;
-    [SerializeField] private bool action;
+    public bool action;
 
     [Space(10f)]
     [Header("Current State")]
@@ -40,35 +40,32 @@ public class Main_Animation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         action = false;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        action_num=anim.GetInteger("action");
+        situation_num=anim.GetInteger("situation");
         speed = agent.speed;
-        action_num = anim.GetInteger("action");
-        situation_num = anim.GetInteger("situation");
+        findTarget();//타겟으로 이동하도록 만듦
     }
 
     // Update is called once per frame
     void Update()
     {
         //anim.SetFloat("Direction", Mathf.Cos(agent.gameObject.transform.rotation.y));
-        if (action==false)//애니메이션이 끝났을 때
+        if (action == false)//애니메이션이 끝났을 때
         {
-            anim.SetBool("Action", false);
-            anim.SetInteger("action",0);//기본상태
-            findTarget();//타겟으로 이동하도록 만듦
+            agent.SetDestination(Targets[target_num - 1].transform.position);
+            anim.SetInteger("action", 0);//기본상태
             anim.SetFloat("Speed", speed);
             Degree();
             anim.SetFloat("Direction", direction);
         }
         else
-        {
-            set_animation();
-            //anim.SetBool("Action", true);
-            //anim.SetInteger("situation", situation_num);
+        { 
+           
         }
-
         if (isPicking) 
         {
             Drop();
@@ -86,7 +83,12 @@ public class Main_Animation : MonoBehaviour
     #region
     public void findTarget()//타겟 위치 찾아서 방향을 잡는 것
     {
-        if (target_num == 0)//타겟넘버 세팅 안되어있을 때 혹은 멈춰있는 상태에 false일 때
+        int temp0 = target_num;
+        target_num = UnityEngine.Random.Range(1, Targets.Length + 1);
+        action = false;
+        agent.enabled = true;
+        agent.ResetPath();
+        if (target_num == temp0)//타겟넘버 세팅 안되어있을 때 혹은 멈춰있는 상태에 false일 때
         {
             if (action == false)
             {
@@ -95,11 +97,11 @@ public class Main_Animation : MonoBehaviour
                 Debug.Log(target_num);
                 if (target_num == temp)
                 {
-                    Debug.Log("뭐야0");
+                    
                     while (target_num == temp)
                     {
+                        Debug.Log("뭐야0");
                         target_num = UnityEngine.Random.Range(1, Targets.Length + 1);//1~5까지 타겟 세팅
-                        temp = target_num;
                     }
                     agent.SetDestination(Targets[target_num - 1].transform.position);
                 }
@@ -120,67 +122,82 @@ public class Main_Animation : MonoBehaviour
         
         if (other.gameObject.CompareTag("target"))
         {
-            Debug.Log(other.name);
-            action = true;
-            anim.SetBool("Action",action);
-            agent.transform.rotation= other.gameObject.transform.localRotation;
-            agent.transform.position = other.gameObject.transform.position;
-            //agent.velocity = Vector3.zero;
-            agent.enabled=false;
-            SetAnim(other.gameObject.name);//object의 애니메이션 number를 함수에 보냄
+            if (other.gameObject.name == "1")//한번만 재생됨
+            {
+                Debug.Log(other.gameObject.name);
+                agent.enabled = false;
+                action = true;
+                action_num = int.Parse(other.gameObject.name);
+
+                agent.transform.rotation = other.gameObject.transform.localRotation;
+                agent.transform.position = other.gameObject.transform.position;
+                set_animation();
+            }
+            else //루프
+            {
+                agent.enabled = false;
+                action = true;
+                action_num = int.Parse(other.gameObject.name);
+                anim.SetInteger("action", action_num);
+                anim.SetBool("Action", action);
+                agent.transform.rotation = other.gameObject.transform.localRotation;
+                SetAnim();
+            }
         }
+    }
+    public void set_animation()//한번만 애니메이션 루프 있을때 (ex)물마시기)
+    {
+        anim.SetInteger("action", action_num);
+        anim.SetBool("Action", action);
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8f)
+        {
+            Debug.Log(anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            Debug.Log(action);
+            findTarget();
+        }
+        //타겟으로 이동하도록 만듦
     }
     #endregion
     //애니메이션 세팅
     #region
-    public void SetAnim(string action_number)//부딪힌 오브젝트에 세팅된 애니메이션 재생
+    public void SetAnim()//부딪힌 오브젝트에 세팅된 애니메이션 재생
     {
-        action_num= int.Parse(action_number);//
-        anim.SetInteger("action", action_num);//애니메이션 재생
-        if (anim.GetCurrentAnimatorStateInfo(0).loop && anim.GetCurrentAnimatorStateInfo(0).IsName("0"))//현재 재생중인 애니메이션이 Loop일 때. 
+        if (action == true) 
         {
-            Debug.Log("뭔데1");
-            InvokeRepeating("Situation", 1.0f, 5f);
+            if (anim.GetCurrentAnimatorStateInfo(0).loop)//현재 재생중인 애니메이션이 Loop일 때. 
+            {
+                Debug.Log("루프애니메이션");
+                InvokeRepeating("Situation", 1.0f, 3f);
+            }
+            else //한번 재생되는 애니메이션이면 한번 재생된 이후 action 비활성화
+            {
+                Debug.Log("한번만 재생되는 애니메이션");
+                anim.SetInteger("situation", 0);
+                Situation();
+            }
         }
-        else //한번 재생되는 애니메이션이면 한번 재생된 이후 action 비활성화
-        {
-            Debug.Log("뭔데2");
-            anim.SetInteger("situation", 0);
-        }
+   
     }
-    public void set_animation() 
-    {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("1")&& anim.GetCurrentAnimatorStateInfo(0).normalizedTime> 0.8f)
-         {
-            
-            action = false;
-            anim.SetBool("Action", action);
-            agent.enabled = true;
-            Debug.Log(action);
-            agent.ResetPath();
-        }
 
-    }
     void Situation()//애니메이터 SubStateMachine에 있는 종속 애니메이션 실행
     {
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2.0f)//재생된 횟수가 2번 이상되버리면 action끄기 
         {
-            action = false;
-            anim.SetBool("Action", action);
+            Debug.Log(anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            anim.SetBool("Action", false);
             anim.SetInteger("action", 0);
-            agent.enabled = true;
-            agent.ResetPath();
+            findTarget();//타겟으로 이동하도록 만듦
         }
         else
         {
             if (action)
             {
+                Debug.Log(anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
                 situation_num = UnityEngine.Random.Range(0, 4);
-                agent.enabled = true;
+
                 anim.SetInteger("situation", situation_num);
-                agent.ResetPath();
+
             }
-            //Debug.Log("Situation" + situation);
         }
     }
     #endregion
