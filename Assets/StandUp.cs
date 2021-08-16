@@ -16,11 +16,11 @@ public class StandUp : StateMachineBehaviour
         
         do
         {
-            situation_num = Random.Range(0, 2);
+            situation_num = Random.Range(0, 3);
             Debug.Log("0");
         } while (stateInfo.IsName(situation_num.ToString()));
         itself_name = animator.GetInteger("situation").ToString();
-        restricted_time = Random.Range(0.5f,2f);//1~4초사이
+        restricted_time = Random.Range(6f,10f);//1~4초사이
         animator.SetInteger("situation", situation_num);
     }
 

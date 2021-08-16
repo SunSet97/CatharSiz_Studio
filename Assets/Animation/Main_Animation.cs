@@ -145,18 +145,19 @@ public class Main_Animation : MonoBehaviour
         if (other.gameObject.CompareTag("target"))
         {
             action = false;
-            if (other.gameObject.name == "1")//한번만 재생됨
+            if (other.gameObject.name == "1"|| other.gameObject.name == "3")//한번만 재생됨
             {
                 Debug.Log(other.gameObject.name);
-                agent.enabled = false;
-                action_num = 1;
-
                 agent.transform.rotation = other.gameObject.transform.localRotation;
                 agent.transform.position = other.gameObject.transform.position;
+                agent.enabled = false;
+                action_num = int.Parse(other.gameObject.name);
                 set_animation();
             }
             else //루프
             {
+                agent.transform.rotation = other.gameObject.transform.localRotation;
+                agent.transform.position = other.gameObject.transform.position;
                 Debug.Log("Trigger Enter");
                 agent.enabled = false;
                 action_num = int.Parse(other.gameObject.name);
