@@ -18,9 +18,10 @@ public class drink_finish : StateMachineBehaviour
         if (stateInfo.normalizedTime > 0.8f&& anim_script.agent.enabled==false) 
         {
             anim_script.anim.SetInteger("action", 0);
+            anim_script.Drop();
             anim_script.action = false;
             anim_script.agent.enabled = true;
-            anim_script.Drop();
+            
         }
     }
 
