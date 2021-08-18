@@ -232,10 +232,13 @@ public class Main_Animation : MonoBehaviour
     }
     public void Drop()
     {
-        GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
-        SetEquip(item, false);
-        playerEquipPoint.transform.DetachChildren();
-        isPicking = false;
+        if (isPicking) 
+        {
+            GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
+            SetEquip(item, false);
+            playerEquipPoint.transform.DetachChildren();
+            isPicking = false;
+        }
 
 
     }

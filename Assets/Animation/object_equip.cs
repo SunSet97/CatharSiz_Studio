@@ -6,13 +6,17 @@ public class object_equip : MonoBehaviour
 {
     GameObject player;
     GameObject playerEquipPoint;
-
+    public bool dropping;
     Main_Animation playerLogic;
     bool isPlayerEnter;
-
+    public Vector3 cup_position;
+    public Quaternion cup_rotation;
     // Start is called before the first frame update
     void Awake()
     {
+        cup_position = transform.position;
+        cup_rotation = transform.rotation;
+        dropping = false;
         player = GameObject.FindGameObjectWithTag("Player");
         playerEquipPoint = GameObject.FindGameObjectWithTag("EquipPoint");
         playerLogic=player.GetComponent<Main_Animation>();
@@ -35,8 +39,12 @@ public class object_equip : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == playerEquipPoint)
-            isPlayerEnter = true;
+        //if (!dropping) 
+        //{
+            if (other.gameObject == playerEquipPoint)
+                isPlayerEnter = true;
+        //}
+        
     }
 
     void OnTriggerExit(Collider other)

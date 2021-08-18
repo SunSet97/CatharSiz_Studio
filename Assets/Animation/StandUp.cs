@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StandUp : StateMachineBehaviour
 {
-    public float restricted_time;
+    public int action_num;
+    public float restricted_time=5f;
     public string itself_name;
     public Animation Action;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -16,11 +17,11 @@ public class StandUp : StateMachineBehaviour
         
         do
         {
-            situation_num = Random.Range(0, 3);
+            situation_num = Random.Range(0, action_num);
             Debug.Log("0");
         } while (stateInfo.IsName(situation_num.ToString()));
         itself_name = animator.GetInteger("situation").ToString();
-        restricted_time = Random.Range(6f,10f);//1~4초사이
+        restricted_time+= Random.Range(-1f,1f);//1~4초사이
         animator.SetInteger("situation", situation_num);
     }
 
