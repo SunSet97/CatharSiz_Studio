@@ -35,7 +35,7 @@ public class StandUp : StateMachineBehaviour
             animator.SetBool("Situation_bool",true);
         }
         //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime + "   " + animator.GetComponent<Main_Animation>().anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)//재생된 횟수가 2번 이상되버리면 action끄기 
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 5.0f)//재생된 횟수가 2번 이상되버리면 action끄기 
         {
             animator.SetInteger("action", 0);
         }
