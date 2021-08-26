@@ -62,10 +62,10 @@ public class Van_ai : MonoBehaviour
     {
         if (vehicle_speed > 0) 
         {
-            Wheels[0].transform.Rotate(Vector3.right * vehicle_speed * 20 * Time.deltaTime, Space.Self);
-            Wheels[1].transform.Rotate(Vector3.right * vehicle_speed * 20 * Time.deltaTime, Space.Self);
-            Wheels[2].transform.Rotate(Vector3.right * vehicle_speed * 20 * Time.deltaTime, Space.Self);
-            Wheels[3].transform.Rotate(Vector3.right * vehicle_speed * 20 * Time.deltaTime, Space.Self);
+            Wheels[0].transform.Rotate(Vector3.right * vehicle_speed * 40 * Time.deltaTime, Space.Self);
+            Wheels[1].transform.Rotate(Vector3.right * vehicle_speed * 40 * Time.deltaTime, Space.Self);
+            Wheels[2].transform.Rotate(Vector3.right * vehicle_speed * 40 * Time.deltaTime, Space.Self);
+            Wheels[3].transform.Rotate(Vector3.right * vehicle_speed * 40 * Time.deltaTime, Space.Self);
         }
         
     }
