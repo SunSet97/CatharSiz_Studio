@@ -145,7 +145,7 @@ public class Main_Animation : MonoBehaviour
         if (other.gameObject.CompareTag("target"))
         {
             action = false;
-            if (other.gameObject.name == "1"|| other.gameObject.name == "3")//한번만 재생됨
+            if (other.gameObject.name == "1")//한번만 재생됨
             {
                 Debug.Log(other.gameObject.name);
                 agent.transform.rotation = other.gameObject.transform.localRotation;
