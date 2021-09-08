@@ -39,17 +39,16 @@ public class object_equip : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        //if (!dropping) 
-        //{
-            if (other.gameObject == playerEquipPoint)
-                isPlayerEnter = true;
-        //}
-        
+        if (other.gameObject.CompareTag("EquipPoint")) 
+        {
+            isPlayerEnter = true;
+        }
+
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == playerEquipPoint)
+        if (other.gameObject.CompareTag("EquipPoint"))
             isPlayerEnter = false;
     }
 
