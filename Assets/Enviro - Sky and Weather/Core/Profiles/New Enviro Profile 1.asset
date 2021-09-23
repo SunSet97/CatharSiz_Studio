@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4beab60d43552cb4d89247b229ee1117, type: 3}
-  m_Name: Enviro Profile Standard Default
+  m_Name: New Enviro Profile 1
   m_EditorClassIdentifier: 
   version: 2.3.3
   lightSettings:
@@ -375,8 +375,8 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5125905
-        value: 3024.4595
+        time: 0.5042592
+        value: 1757.5498
         inSlope: 926.3545
         outSlope: 926.3545
         tangentMode: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     lightColorTint:
       serializedVersion: 2
-      key0: {r: 0.7783019, g: 0.8559979, b: 1, a: 1}
+      key0: {r: 0.8349056, g: 0.89283353, b: 1, a: 1}
       key1: {r: 1, g: 0.945918, b: 0.8726415, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -434,15 +434,15 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     controlSceneExposure: 1
-    exposure: 7
-    skyExposure: 7
-    lightIntensityLuxMult: 7
+    exposure: 12.98
+    skyExposure: 13.76
+    lightIntensityLuxMult: 20
     exposurePhysical:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.009174839
-        value: 1.2154541
+        time: 0.0050282627
+        value: 0.9485779
         inSlope: 0.41491833
         outSlope: 0.41491833
         tangentMode: 0
@@ -450,8 +450,8 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33693582
-        value: 2.8637238
+        time: 0.33279306
+        value: 2.4634247
         inSlope: 16.326128
         outSlope: 16.326128
         tangentMode: 0
@@ -501,10 +501,10 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28695774
-        value: 1.3106312
-        inSlope: 6.7239985
-        outSlope: 6.7239985
+        time: 0.3037424
+        value: 2.513207
+        inSlope: 14.634564
+        outSlope: 14.634564
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -532,7 +532,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     indirectLightingUpdateMode: 0
   reflectionSettings:
-    globalReflections: 0
+    globalReflections: 1
     globalReflectionCustomRendering: 1
     globalReflectionUseFog: 0
     globalReflectionTimeSlicing: 1
@@ -585,9 +585,9 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 0
     ExtinctionCoef: 0.1
-    Anistropy: 0.7
+    Anistropy: 0.6
     MaxRayLength: 200
-    directLightNoise: 1
+    directLightNoise: 0
     noiseIntensity: 1
     noiseIntensityOffset: 0.333
     noiseScale: 0.0044
@@ -1002,8 +1002,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.016666412
-        value: 2
+        time: -0.012432098
+        value: 1.498558
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1046,8 +1046,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.0083351135
-        value: 2
+        time: 0.004234314
+        value: 0.5028839
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1090,12 +1090,12 @@ MonoBehaviour:
     cloudsQualitySettings:
       bottomCloudHeight: 4000
       topCloudHeight: 10000
-      raymarchSteps: 150
+      raymarchSteps: 256
       stepsInDepthModificator: 0.7
       transmissionToExit: 0.15
       cloudsRenderResolution: 1
-      reprojectionPixelSize: 1
-      lodDistance: 0.25
+      reprojectionPixelSize: 2
+      lodDistance: 0.35
       baseNoiseUV: 15
       detailNoiseUV: 50
       useCurlNoise: 0
@@ -1604,25 +1604,25 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    skyFogIntensity: 1
+    skyFogIntensity: 0.25
     fogExposure: 1
     useEnviroGroundFog: 0
     useHDRPFog: 1
     fogColorTint:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.29803923, g: 0.33333334, b: 0.4392157, a: 1}
+      key1: {r: 0.29803923, g: 0.33333334, b: 0.4392157, a: 1}
+      key2: {r: 0.5955882, g: 0.48383433, b: 0.36348397, a: 0}
+      key3: {r: 0.6, g: 0.69803923, b: 0.7647059, a: 0}
+      key4: {r: 0.6, g: 0.69803923, b: 0.7647059, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
+      ctime1: 30146
+      ctime2: 33423
+      ctime3: 37355
+      ctime4: 65535
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 5
       m_NumAlphaKeys: 2
   lightshaftsSettings:
     resolution: 1
@@ -1927,8 +1927,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 0.5
         value: 0.1
@@ -1936,8 +1936,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 0
@@ -1945,8 +1945,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1960,13 +1960,13 @@ MonoBehaviour:
     auroraLayer2Settings: {x: 5, y: 5, z: 0, w: 0.5}
     auroraColorshiftSettings: {x: 0.05, y: 0.05, z: 0, w: 5}
     auroraSpeed: 0.005
-  viewMode: 1
-  viewModeLW: 1
-  showPlayerSetup: 0
+  viewMode: 0
+  viewModeLW: 0
+  showPlayerSetup: 1
   showRenderingSetup: 0
   showComponentsSetup: 0
-  showTimeUI: 1
-  showWeatherUI: 1
+  showTimeUI: 0
+  showWeatherUI: 0
   showAudioUI: 0
   showEffectsUI: 0
   modified: 0
