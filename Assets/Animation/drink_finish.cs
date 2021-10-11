@@ -20,13 +20,7 @@ public class drink_finish : StateMachineBehaviour
         {
             anim_script.Drop();
         } 
-        if (stateInfo.normalizedTime > 0.8f&& anim_script.agent.enabled==false) 
-        {
-            anim_script.anim.SetInteger("action", 0);
-            anim_script.action = false;
-            anim_script.agent.enabled = true;
-            
-        }
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -62,7 +62,7 @@ public class Main_Animation : MonoBehaviour
         anim = GetComponent<Animator>();
         situation_num=anim.GetInteger("situation");
         speed = agent.speed;
-        target_num = UnityEngine.Random.Range(1, Targets.Length + 1);
+        target_num = UnityEngine.Random.Range(1, Targets.Length);
     }
 
     // Update is called once per frame
