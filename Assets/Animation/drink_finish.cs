@@ -10,7 +10,14 @@ public class drink_finish : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         anim_script = animator.gameObject.GetComponent<Main_Animation>();
-        object_equip = GameObject.Find("cup_equip").GetComponent<object_equip>();
+        if (animator.GetInteger("action") == 1) 
+        {
+            object_equip = GameObject.Find("Eden_ciga").GetComponent<object_equip>();
+        }
+        if (animator.GetInteger("action") == 2)
+        {
+            object_equip = GameObject.Find("Eden_tabletpen").GetComponent<object_equip>();
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
