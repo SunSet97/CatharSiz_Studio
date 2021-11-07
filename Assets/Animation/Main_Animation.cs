@@ -17,7 +17,7 @@ public class animation_Action : Editor
             action.action = true;
             action.agent.enabled = true;
             action.agent.ResetPath();
-            action.agent.SetDestination(action.Targets[action.target_num - 1].transform.position);
+            action.agent.SetDestination(action.Targets[action.target_num].transform.position);
         }
         
  }
@@ -62,7 +62,7 @@ public class Main_Animation : MonoBehaviour
         anim = GetComponent<Animator>();
         situation_num=anim.GetInteger("situation");
         speed = agent.speed;
-        target_num = UnityEngine.Random.Range(1, Targets.Length);
+        target_num = UnityEngine.Random.Range(0, Targets.Length);
     }
 
     // Update is called once per frame
@@ -104,10 +104,10 @@ public class Main_Animation : MonoBehaviour
             while (target_num == temp)
             {
                 Debug.Log("뭐야0");
-                target_num = UnityEngine.Random.Range(1, Targets.Length + 1);//1~5까지 타겟 세팅
+                target_num = UnityEngine.Random.Range(0, Targets.Length);//1~5까지 타겟 세팅
             }
         }
-        agent.SetDestination(Targets[target_num - 1].transform.position);
+        agent.SetDestination(Targets[target_num].transform.position);
 
         /*
         if (target_num == temp0)//타겟넘버 세팅 안되어있을 때 혹은 멈춰있는 상태에 false일 때
