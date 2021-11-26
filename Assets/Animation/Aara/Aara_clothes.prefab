@@ -1497,6 +1497,51 @@ Transform:
   m_Father: {fileID: 1653365914720287470}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5228722956485046001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6642496051879167214}
+  - component: {fileID: 4763356382495679087}
+  m_Layer: 0
+  m_Name: EquipPoint
+  m_TagString: EquipPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6642496051879167214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228722956485046001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0059, y: 0.0586, z: 0.0078}
+  m_LocalScale: {x: 0.055904556, y: 0.09323203, z: 0.055904556}
+  m_Children: []
+  m_Father: {fileID: 7591766082241796893}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4763356382495679087
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228722956485046001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 0.2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5330303458487699940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1825,7 @@ Transform:
   - {fileID: 6948206314690505917}
   - {fileID: 1036537581236732889}
   - {fileID: 420210224663916587}
+  - {fileID: 6642496051879167214}
   m_Father: {fileID: 6016155048938705277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2469,6 +2515,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8603083309338526526}
+  - component: {fileID: 1409803976261346323}
+  - component: {fileID: 5619944128928158610}
   - component: {fileID: 2415167883472197956}
   m_Layer: 0
   m_Name: Aara_clothes
@@ -2498,6 +2546,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -57.29, z: 0}
+--- !u!114 &1409803976261346323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948540433022540164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d50e30fc30bad84881160d6838e5bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aara_AI: {fileID: 0}
+  anim: {fileID: 0}
+  Aara_transform: {fileID: 0}
+  route_i: 0
+  Routes: []
+  firstPosition: {x: 0, y: 0, z: 0}
+  firstLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!195 &5619944128928158610
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948540433022540164}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.73
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!95 &2415167883472197956
 Animator:
   serializedVersion: 3
@@ -2508,7 +2597,7 @@ Animator:
   m_GameObject: {fileID: 8948540433022540164}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 82b954bb6560b4d4598f0977eb730737, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1531180cb29dec45945621633fbd573, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
